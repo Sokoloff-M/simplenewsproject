@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}SimpleNews{% endblock %}</title>
+</head>
+<body>
+    <header>
+        <h1>{% block header %}SimpleNews{% endblock %}</h1>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="/">Главная</a></li>
+            <li><a href="{% url 'news-list' %}">Новости</a></li>
+            <!-- Другие пункты меню, если необходимо -->
+        </ul>
+    </nav>
+
+    <main>
+        {% block content %}{% endblock %}
+    </main>
+
+    <footer>
+        &copy; {{ year }} SimpleNews
+    </footer>
+</body>
+</html>
+>
